@@ -1,0 +1,8 @@
+mkdir tests
+cd tests
+touch file_2017_06_{01..30}.log
+for i in file_2017_06_{01..30}.log
+	do
+	echo "ERROR" >$i
+	done
+cat file_2017_06_{01..30}.log | grep ERROR | wc -w
